@@ -1,0 +1,83 @@
+﻿Species Name ,Common Name,Temp,Body Mass,MSMR,Lifespan,Basal CC,Assay Method,Environment 
+Aethia pusilla,Least Auklet,41,85,,8.1,6.5,RIA,Field
+Amazona ventralis,Hispaniolan Amazon,,239,,,19.8,RIA,Captive
+Anas platyrhynchos,Mallard,41.25,2709,3.99,29.1,11.8,RIA,Captive
+Aphelocoma coerulescens,Florida Scrub-Jay,,76,,15,3,RIA,Field
+Aphrastura spinicauda,Thorn-tailed Rayadito,,12,,,8,RIA,Field
+Asio otus,Long-eared Owl,40.1,262,3.79,27.8,7.3,RIA,Field
+Calcarius lapponicus,Lapland Longspur,41.7,27,,6,11,RIA,Field
+Calcarius ornatus,Chestnut-collared Longspur,,19,,,5.5,RIA,Field
+Calcarius pictus,Smith's Longspur,,27,,5,8.2,RIA,Field
+Calidris canutus,Red Knot,40.1,135,,27.3,10,RIA,Field
+Calidris melanotos,Pectoral Sandpiper,41.7,81,,,10.1,RIA,Field
+Calidris pusilla,Semipalmated Sandpiper,,26,,19.3,21.6,RIA,Field
+Carduelis flammea,Common Redpoll,,13,20.63,12.2,10.5,RIA,Field
+Columba livia,Rock Pigeon,41,300,5.33,12.6,2.9,RIA,Field
+Cuculus canorus,Common Cuckoo,,102,8.22,12.9,6.1,EIA,Field
+Cuculus poliocephalus,Lesser Cuckoo,,56,,,6.8,EIA,Field
+Daption capense,Cape Petrel,40.6,472,,25,1.5,RIA,Field
+Diomedea exulans,Wandering Albatross,39.6,7650,2.26,50,6.2,RIA,Field
+Diomedea melanophris,Black-browed Albatross,,3564,,43.7,0.5,RIA,Field
+Empidonax oberholseri,Dusky Flycatcher,,21,,9,29.1,RIA,Field
+Eudyptes chrysocome,Southern Rockhopper Penguin,,2500,,,5.8,RIA,Field
+Ficedula hypoleuca,European Pied Flycatcher,40.4,12,19.33,15,24.9,RIA,Field
+Gallus domesticus,Domestic Chicken,,2580,2.22,,1.2,EIA,Captive
+Grus canadensis,Sandhill Crane,40.8,5000,2.07,36.6,1.9,RIA,Field
+Haemorhous mexicanus,House Finch,,23,13.64,11.6,8.4,RIA,Field
+Histrionicus histrionicus,Harlequin Duck,,623,,14.6,8.3,RIA,Field
+Horornis diphone,Japanese Bush Warbler,,17,,,52.2,RIA,Field
+Junco hyemalis,Dark-eyed Junco,42.7,20,16.4,11.3,16,RIA,Field
+Lagopus muta,Rock Ptarmigan,42.3,422,,,16.5,RIA,Field
+Larus hyperboreus,Glaucous Gull,42.1,1576,7.21,21.1,12.2,RIA,Field
+Leuconotopicus borealis,Red-cockaded Woodpecker,,44,,,10,RIA,Field
+Limosa lapponica,Bar-tailed Godwit,40.9,216,,34,13,RIA,Field
+Megadyptes antipodes,Yellow-eyed Penguin,37.8,5200,2.4,,0.5,EIA,Field
+Melanitta deglandi,White-winged Scoter,,1194,,,5,  EIA,Captive
+Melospiza melodia,Song Sparrow,42.8,21,13.09,11.3,18.5,RIA,Field
+Melozone aberti,Abert's Towhee,,46,15.76,8.6,10,RIA,Field
+Mimus polyglottos,Northern Mockingbird,42.85,49,,20,4,RIA,Field
+Morus serrator,Australasian Gannet,,2350,,33,3.1,RIA,Field
+Pagodroma nivea,Snow Petrel,39.6,472,,46,1.5,RIA,Field
+Parabuteo unicinctus,Harris's Hawk,,886,,,8,RIA,Field
+Parus caeruleus,Eurasian Blue Tit,,11,,14.6,7.2,RIA,Field
+Parus major,Great Tit,,19,21.79,15.4,19.9,RIA,Field
+Passer domesticus,House Sparrow,42.1,29,12.99,23,4.5,RIA,Field
+Passerculus sandwichensis,Savannah Sparrow,42.65,20,13.9,,20.4,RIA,Field
+Passerina cyanea,Indigo Bunting,42.6,15,,11,21.9,RIA,Field
+Perdicula asiatica,Jungle Bush Quail,,35,,,11,EIA,Field
+Petrochelidon pyrrhonota,Cliff Swallow,,23,,11.8,9,RIA,Field
+Peucaea carpalis,Rufous-winged Sparrow,,16,,,14,EIA,Field
+Phaethon rubricauda,Red-tailed Tropicbird,,718,5.61,32.7,5.2,RIA,Field
+Phalaropus fulicaria,Red Phalarope,,56,,,21.8,RIA,Field
+Plectrophenax nivalis,Snow Bunting,40,34,13.09,9.6,9.3,RIA,Field
+Pterodroma macroptera,Great-winged Petrel,,570,,,12.6,RIA,Field
+Ptilotula penicillata,White-plumed Honeyeater,,19,,,15,RIA,Captive
+Pygoscelis adeliae,Adélie Penguin,38,4850,3.08,,7.8,RIA,Field
+Rhynchophanes mccownii,McCown's Longspur,,25,,,5.9,RIA,Captive
+Rissa brevirostris,Red-legged Kittiwake,,377,,27,2.7,RIA,Field
+Rissa tridactyla,Black-legged Kittiwake,41.5,411,,28.5,7.3,RIA,Field
+Saxicola torquata,African Stonechat,,15,,8.8,10.1,RIA,Field
+Setophaga petechia,Yellow Warbler,,10,,11,22.3,RIA,Field
+Setophaga ruticilla,American Redstart,43.2,8,,10.1,15,RIA,Field
+Somateria mollissima,Common Eider,,1140,,37.8,6,RIA,Field
+Spheniscus humboldti,Humboldt Penguin,,5000,2.45,,3.5,RIA,Field
+Spheniscus magellanicus,Magellanic Penguin,,4500,,30,4.2,RIA,Field
+Spheniscus mendiculus,Galápagos Penguin,,2500,,,3,RIA,Field
+Spinus pinus,Pine Siskin,,17,21.45,11,13.8,RIA,Captive
+Spizella arborea,American Tree Sparrow,,18,19.66,10.8,16.4,RIA,Field
+Stercorarius maccormicki,South Polar Skua,41.2,1419,,23.5,6.7,RIA,Field
+Sterna hirundo,Common Tern,,125,,33,10,RIA,Field
+Sturnus vulgaris,European Starling,41.5,74,11.69,22.9,9.9,EIA,Field
+Sula granti,Nazca Booby,,1754,,21,6.2,RIA,Field
+Sula nebouxii,Blue-footed Booby,,1542,,18,16.1,RIA,Field
+Sula sula,Red-footed Booby,,850,4.28,23,6.2,RIA,Field
+Tachycineta bicolor,Tree Swallow,41.65,20,,12.1,8.2,EIA,Field
+Taeniopygia guttata,Zebra Finch,,12,,12,4.3,RIA,Field
+Thallasarche melanophris,Black-browed Albatross,,3540,4.47,43.7,4,RIA,Field
+Thryesphilus rufalbus,Rufous-backed Wren,,27,,,9,EIA,Field
+Toxostoma curvirostre,Curve-billed Thrasher,42.7,79,,10.8,15,RIA,Field
+Turdus merula,Common Blackbird,,113,,21.8,4.7,EIA,Field
+Uria lomvia,Thick-billed Murre,39,1098,6.87,29,3.8,RIA,Field
+Zenaida macroura,Mourning Dove,42.5,119,5.98,31.3,3.8,RIA,Field
+Zonotrichia capensis,Rufous-collared Sparrow,,20,,,24.2,RIA,Field
+Zonotrichia leucophrys,White-crowned Sparrow,42.75,25,12.87,13.3,19.3,RIA,Field

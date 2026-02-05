@@ -1,0 +1,339 @@
+#NEXUS
+[R-package APE, Thu Feb  5 14:38:29 2026]
+
+BEGIN TAXA;
+	DIMENSIONS NTAX = 163;
+	TAXLABELS
+		Mus musculus
+		Psammomys obesus
+		Mesocricetus auratus
+		Microtus ochrogaster
+		Microtus pennsylvanicus
+		Castor fiber
+		Ctenomys talarum
+		Cavia porcellus
+		Urocitellus parryii
+		Urocitellus beldingi
+		Callospermophilus saturatus
+		Tamias amoenus
+		Oryctolagus cuniculus
+		Macaca fascicularis
+		Macaca mulatta
+		Aotus trivirgatus
+		Saimiri sciureus
+		Odocoileus virginianus
+		Ovis aries
+		Bos taurus
+		Orcinus orca
+		Sus scrofa
+		Mustela putorius furo
+		Canis lupus dingo
+		Vulpes vulpes
+		Elephas maximus
+		Macropus giganteus
+		Notamacropus rufogriseus
+		Wallabia bicolor
+		Setonix brachyurus
+		Vombatus ursinus
+		Dasyurus maculatus
+		Dasyurus geoffroii
+		Tachyglossus aculeatus
+		Thryophilus rufalbus
+		Saxicola torquata
+		Ficedula hypoleuca
+		Turdus merula
+		Sturnus vulgaris
+		Mimus polyglottos
+		Toxostoma curvirostre
+		Taeniopygia guttata
+		Passerina cyanea
+		Aimophila carpalis
+		Kieneria aberti
+		Melospiza melodia
+		Passerculus sandwichensis
+		Zonotrichia leucophrys
+		Zonotrichia capensis
+		Junco hyemalis
+		Spizelloides arborea
+		Setophaga petechia
+		Setophaga ruticilla
+		Calcarius lapponicus
+		Calcarius mccownii
+		Plectrophenax nivalis
+		Calcarius ornatus
+		Calcarius pictus
+		Acanthis flammea
+		Spinus pinus
+		Haemorhous mexicanus
+		Passer domesticus
+		Horornis diphone
+		Tachycineta bicolor
+		Petrochelidon pyrrhonota
+		Cyanistes caeruleus
+		Parus major
+		Aphelocoma coerulescens
+		Ptilotula penicillata
+		Aphrastura spinicauda
+		Empidonax oberholseri
+		Amazona ventralis
+		Parabuteo unicinctus
+		Asio otus
+		Leuconotopicus borealis
+		Calidris melanotos
+		Calidris pusilla
+		Calidris canutus
+		Phalaropus fulicaria
+		Limosa lapponica
+		Sterna hirundo
+		Larus hyperboreus
+		Rissa brevirostris
+		Rissa tridactyla
+		Uria lomvia
+		Aethia pusilla
+		Stercorarius maccormicki
+		Antigone canadensis
+		Sula granti
+		Sula nebouxii
+		Sula sula
+		Morus serrator
+		Pterodroma macroptera
+		Daption capense
+		Pagodroma nivea
+		Diomedea exulans
+		Thalassarche melanophris
+		Eudyptes chrysocome
+		Megadyptes antipodes
+		Spheniscus magellanicus
+		Spheniscus mendiculus
+		Spheniscus humboldti
+		Pygoscelis adeliae
+		Phaethon rubricauda
+		Cuculus canorus
+		Cuculus poliocephalus
+		Columba livia
+		Zenaida macroura
+		Lagopus muta
+		Gallus gallus
+		Perdicula asiatica
+		Anas platyrhynchos
+		Melanitta deglandi
+		Somateria mollissima
+		Histrionicus histrionicus
+		Caiman latirostris
+		Alligator mississippiensis
+		Crocodylus niloticus
+		Crocodylus johnstoni
+		Chelonoidis niger
+		Gopherus agassizii
+		Caretta caretta
+		Lepidochelys kempii
+		Chelonia mydas
+		Pituophis catenifer affinis
+		Nerodia rhombifer
+		Nerodia sipedon
+		Regina septemvittata
+		Thamnophis sirtalis parietalis
+		Thamnophis errans
+		Natrix tessellata
+		Boaedon fuliginosus
+		Crotalus viridis
+		Crotalus atrox
+		Agkistrodon piscivorus
+		Vipera aspis
+		Antaresia childreni
+		Malayopython reticulatus
+		Python bivittatus
+		Python regius
+		Boa constrictor
+		Phrynocephalus vlangalii
+		Anolis sagrei
+		Anolis carolinensis
+		Sceloporus undulatus
+		Sceloporus occidentalis
+		Urosaurus ornatus
+		Uta stansburiana
+		Amblyrhynchus cristatus
+		Heloderma horridum
+		Heloderma suspectum
+		Elgaria multicarinata
+		Elgaria coerulea
+		Varanus varius
+		Varanus salvator
+		Aspidoscelis sexlineatus
+		Aspidoscelis uniparens
+		Podarcis siculus
+		Zootoca vivipara
+		Tiliqua scincoides
+		Liopholis whitii
+		Hoplodactylus duvaucelii
+		Sphenodon punctatus
+	;
+END;
+BEGIN TREES;
+	TRANSLATE
+		1	Mus musculus,
+		2	Psammomys obesus,
+		3	Mesocricetus auratus,
+		4	Microtus ochrogaster,
+		5	Microtus pennsylvanicus,
+		6	Castor fiber,
+		7	Ctenomys talarum,
+		8	Cavia porcellus,
+		9	Urocitellus parryii,
+		10	Urocitellus beldingi,
+		11	Callospermophilus saturatus,
+		12	Tamias amoenus,
+		13	Oryctolagus cuniculus,
+		14	Macaca fascicularis,
+		15	Macaca mulatta,
+		16	Aotus trivirgatus,
+		17	Saimiri sciureus,
+		18	Odocoileus virginianus,
+		19	Ovis aries,
+		20	Bos taurus,
+		21	Orcinus orca,
+		22	Sus scrofa,
+		23	Mustela putorius furo,
+		24	Canis lupus dingo,
+		25	Vulpes vulpes,
+		26	Elephas maximus,
+		27	Macropus giganteus,
+		28	Notamacropus rufogriseus,
+		29	Wallabia bicolor,
+		30	Setonix brachyurus,
+		31	Vombatus ursinus,
+		32	Dasyurus maculatus,
+		33	Dasyurus geoffroii,
+		34	Tachyglossus aculeatus,
+		35	Thryophilus rufalbus,
+		36	Saxicola torquata,
+		37	Ficedula hypoleuca,
+		38	Turdus merula,
+		39	Sturnus vulgaris,
+		40	Mimus polyglottos,
+		41	Toxostoma curvirostre,
+		42	Taeniopygia guttata,
+		43	Passerina cyanea,
+		44	Aimophila carpalis,
+		45	Kieneria aberti,
+		46	Melospiza melodia,
+		47	Passerculus sandwichensis,
+		48	Zonotrichia leucophrys,
+		49	Zonotrichia capensis,
+		50	Junco hyemalis,
+		51	Spizelloides arborea,
+		52	Setophaga petechia,
+		53	Setophaga ruticilla,
+		54	Calcarius lapponicus,
+		55	Calcarius mccownii,
+		56	Plectrophenax nivalis,
+		57	Calcarius ornatus,
+		58	Calcarius pictus,
+		59	Acanthis flammea,
+		60	Spinus pinus,
+		61	Haemorhous mexicanus,
+		62	Passer domesticus,
+		63	Horornis diphone,
+		64	Tachycineta bicolor,
+		65	Petrochelidon pyrrhonota,
+		66	Cyanistes caeruleus,
+		67	Parus major,
+		68	Aphelocoma coerulescens,
+		69	Ptilotula penicillata,
+		70	Aphrastura spinicauda,
+		71	Empidonax oberholseri,
+		72	Amazona ventralis,
+		73	Parabuteo unicinctus,
+		74	Asio otus,
+		75	Leuconotopicus borealis,
+		76	Calidris melanotos,
+		77	Calidris pusilla,
+		78	Calidris canutus,
+		79	Phalaropus fulicaria,
+		80	Limosa lapponica,
+		81	Sterna hirundo,
+		82	Larus hyperboreus,
+		83	Rissa brevirostris,
+		84	Rissa tridactyla,
+		85	Uria lomvia,
+		86	Aethia pusilla,
+		87	Stercorarius maccormicki,
+		88	Antigone canadensis,
+		89	Sula granti,
+		90	Sula nebouxii,
+		91	Sula sula,
+		92	Morus serrator,
+		93	Pterodroma macroptera,
+		94	Daption capense,
+		95	Pagodroma nivea,
+		96	Diomedea exulans,
+		97	Thalassarche melanophris,
+		98	Eudyptes chrysocome,
+		99	Megadyptes antipodes,
+		100	Spheniscus magellanicus,
+		101	Spheniscus mendiculus,
+		102	Spheniscus humboldti,
+		103	Pygoscelis adeliae,
+		104	Phaethon rubricauda,
+		105	Cuculus canorus,
+		106	Cuculus poliocephalus,
+		107	Columba livia,
+		108	Zenaida macroura,
+		109	Lagopus muta,
+		110	Gallus gallus,
+		111	Perdicula asiatica,
+		112	Anas platyrhynchos,
+		113	Melanitta deglandi,
+		114	Somateria mollissima,
+		115	Histrionicus histrionicus,
+		116	Caiman latirostris,
+		117	Alligator mississippiensis,
+		118	Crocodylus niloticus,
+		119	Crocodylus johnstoni,
+		120	Chelonoidis niger,
+		121	Gopherus agassizii,
+		122	Caretta caretta,
+		123	Lepidochelys kempii,
+		124	Chelonia mydas,
+		125	Pituophis catenifer affinis,
+		126	Nerodia rhombifer,
+		127	Nerodia sipedon,
+		128	Regina septemvittata,
+		129	Thamnophis sirtalis parietalis,
+		130	Thamnophis errans,
+		131	Natrix tessellata,
+		132	Boaedon fuliginosus,
+		133	Crotalus viridis,
+		134	Crotalus atrox,
+		135	Agkistrodon piscivorus,
+		136	Vipera aspis,
+		137	Antaresia childreni,
+		138	Malayopython reticulatus,
+		139	Python bivittatus,
+		140	Python regius,
+		141	Boa constrictor,
+		142	Phrynocephalus vlangalii,
+		143	Anolis sagrei,
+		144	Anolis carolinensis,
+		145	Sceloporus undulatus,
+		146	Sceloporus occidentalis,
+		147	Urosaurus ornatus,
+		148	Uta stansburiana,
+		149	Amblyrhynchus cristatus,
+		150	Heloderma horridum,
+		151	Heloderma suspectum,
+		152	Elgaria multicarinata,
+		153	Elgaria coerulea,
+		154	Varanus varius,
+		155	Varanus salvator,
+		156	Aspidoscelis sexlineatus,
+		157	Aspidoscelis uniparens,
+		158	Podarcis siculus,
+		159	Zootoca vivipara,
+		160	Tiliqua scincoides,
+		161	Liopholis whitii,
+		162	Hoplodactylus duvaucelii,
+		163	Sphenodon punctatus
+	;
+	TREE * UNTITLED = [&R] ((((((((((((1:0.006172839506,2:0.006172839506)Muridae_ott816256:0.01851851852,(3:0.01234567901,(4:0.006172839506,5:0.006172839506)mrcaott42889ott48249:0.006172839506)mrcaott9032ott42889:0.01234567901)mrcaott102ott739:0.006172839506,6:0.03086419753)mrcaott42ott48903:0.01234567901,(7:0.006172839506,8:0.006172839506)mrcaott38834ott44975:0.03703703704)mrcaott42ott38834:0.02469135802,(((9:0.006172839506,10:0.006172839506)mrcaott136299ott359103:0.006172839506,11:0.01234567901)mrcaott10477ott208064:0.006172839506,12:0.01851851852)Marmotini_ott394009:0.04938271605)mrcaott42ott10477:0.006172839506,13:0.07407407407)mrcaott42ott29157:0.02469135802,((14:0.006172839506,15:0.006172839506)mrcaott575292ott689663:0.01234567901,(16:0.006172839506,17:0.006172839506)mrcaott2025ott93900:0.01234567901)Simiiformes_ott386195:0.08024691358)Euarchontoglires_ott392222:0.04938271605,((((18:0.01234567901,(19:0.006172839506,20:0.006172839506)Bovidae_ott768677:0.006172839506)mrcaott1548ott20474:0.006172839506,21:0.01851851852)mrcaott1548ott5256:0.006172839506,22:0.02469135802)mrcaott1548ott21987:0.01851851852,(23:0.01234567901,(24:0.006172839506,25:0.006172839506)mrcaott47497ott77889:0.006172839506)Caniformia_ott827263:0.03086419753)mrcaott1548ott4697:0.1049382716)Boreoeutheria_ott5334778:0.006172839506,26:0.1543209877)mrcaott42ott72667:0.04320987654,(((((27:0.006172839506,28:0.006172839506)mrcaott42481ott42493:0.006172839506,29:0.01234567901)mrcaott42481ott836770:0.006172839506,30:0.01851851852)mrcaott42481ott733444:0.006172839506,31:0.02469135802)Diprotodontia_ott277679:0.01234567901,(32:0.006172839506,33:0.006172839506)mrcaott74729ott379186:0.03086419753)mrcaott6735ott70811:0.1604938272)Theria_-subclass_in_Deuterostomia-_ott229558:0.006172839506,34:0.2037037037)Mammalia_ott244265:0.7962962963,((((((((((((((35:0.03703703704,(((36:0.006172839506,37:0.006172839506)mrcaott1566ott22300:0.006172839506,38:0.01234567901)mrcaott1566ott19467:0.01851851852,(39:0.01234567901,(40:0.006172839506,41:0.006172839506)mrcaott259082ott259086:0.006172839506)mrcaott2175ott259082:0.01851851852)mrcaott1566ott2175:0.006172839506)mrcaott246ott1566:0.1296296296,(42:0.1234567901,((((43:0.06172839506,((44:0.04320987654,((45:0.01234567901,(46:0.006172839506,47:0.006172839506)mrcaott261498ott292636:0.006172839506)mrcaott6023ott261498:0.02469135802,(((49:0.006172839506,48:0.006172839506)Zonotrichia_-genus_in_domain_Eukaryota-_ott789032:0.006172839506,50:0.01234567901)mrcaott125079ott765405:0.006172839506,51:0.01851851852)mrcaott125079ott463026:0.01851851852)mrcaott6023ott125079:0.006172839506)mrcaott5616ott6023:0.01234567901,(52:0.006172839506,53:0.006172839506)mrcaott22834ott34665:0.04938271605)mrcaott5616ott5620:0.006172839506)mrcaott4088ott5616:0.03086419753,((54:0.01234567901,(55:0.006172839506,56:0.006172839506)mrcaott948132ott951125:0.006172839506)mrcaott420995ott948132:0.01234567901,(57:0.006172839506,58:0.006172839506)mrcaott765406ott1002233:0.01851851852)mrcaott420995ott765406:0.06790123457)mrcaott4088ott28339:0.01851851852,((59:0.006172839506,60:0.006172839506)mrcaott6366ott6375:0.006172839506,61:0.01234567901)mrcaott6366ott641497:0.0987654321)mrcaott4088ott6366:0.006172839506,62:0.1172839506)mrcaott4088ott9416:0.006172839506)mrcaott4083ott4088:0.04320987654)mrcaott246ott3364:0.03086419753,((63:0.01234567901,(64:0.006172839506,65:0.006172839506)mrcaott16185ott67916:0.006172839506)mrcaott1488ott16185:0.01234567901,(66:0.006172839506,67:0.006172839506)mrcaott61147ott84656:0.01851851852)mrcaott1488ott2375:0.1728395062)mrcaott246ott1488:0.006172839506,68:0.2037037037)mrcaott246ott4820:0.006172839506,69:0.2098765432)mrcaott246ott5929:0.01234567901,(70:0.006172839506,71:0.006172839506)mrcaott3212ott8441:0.2160493827)mrcaott246ott3212:0.006172839506,72:0.2283950617)mrcaott246ott7113:0.01851851852,((73:0.006172839506,74:0.006172839506)mrcaott1858ott2907:0.006172839506,75:0.01234567901)mrcaott1858ott6895:0.2345679012)mrcaott246ott1858:0.1790123457,(((((((76:0.006172839506,77:0.006172839506)mrcaott57825ott234671:0.006172839506,78:0.01234567901)mrcaott24121ott214779:0.006172839506,79:0.01851851852)mrcaott24121ott55408:0.006172839506,80:0.02469135802)mrcaott24121ott217797:0.04320987654,((81:0.01851851852,(82:0.01234567901,(83:0.006172839506,84:0.006172839506)Rissa_ott525755:0.006172839506)mrcaott22965ott154126:0.006172839506)mrcaott7639ott22965:0.01851851852,((85:0.006172839506,86:0.006172839506)mrcaott147723ott280907:0.006172839506,87:0.01234567901)mrcaott147723ott219032:0.02469135802)mrcaott7639ott147723:0.03086419753)mrcaott5272ott7639:0.006172839506,88:0.07407407407)mrcaott5272ott7145:0.0987654321,((((91:0.01234567901,(89:0.006172839506,90:0.006172839506)mrcaott170197ott429615:0.006172839506)Sula_ott160486:0.006172839506,92:0.01851851852)mrcaott170197ott403772:0.06790123457,(((93:0.01234567901,(94:0.006172839506,95:0.006172839506)mrcaott82196ott656580:0.006172839506)mrcaott31011ott82196:0.01234567901,(96:0.006172839506,97:0.006172839506)Diomedeidae_ott85277:0.01851851852)Procellariiformes_ott452461:0.03703703704,(((98:0.006172839506,99:0.006172839506)mrcaott60413ott7068884:0.01851851852,(100:0.01234567901,(101:0.006172839506,102:0.006172839506)mrcaott399791ott810741:0.006172839506)mrcaott60417ott399791:0.01234567901)mrcaott60413ott60417:0.006172839506,103:0.03086419753)mrcaott60413ott134466:0.03086419753)mrcaott18206ott60413:0.02469135802)mrcaott9830ott18206:0.006172839506,104:0.09259259259)mrcaott9830ott86672:0.08024691358)mrcaott5272ott5481:0.2530864198)mrcaott246ott5272:0.02469135802,((106:0.006172839506,105:0.006172839506)mrcaott549514ott7068132:0.01234567901,(107:0.006172839506,108:0.006172839506)mrcaott45505ott50388:0.01234567901)mrcaott5021ott17146:0.4320987654)mrcaott246ott5021:0.04320987654,((109:0.01234567901,(110:0.006172839506,111:0.006172839506)mrcaott49310ott49319:0.006172839506)mrcaott4765ott49310:0.02469135802,(112:0.01851851852,((113:0.006172839506,114:0.006172839506)mrcaott166683ott430245:0.006172839506,115:0.01234567901)mrcaott166683ott679317:0.006172839506)mrcaott30843ott166683:0.01851851852)Galloanserae_ott5839486:0.4567901235)Neognathae_ott241846:0.02469135802,((116:0.006172839506,117:0.006172839506)Alligatoridae_ott195670:0.01234567901,(118:0.006172839506,119:0.006172839506)Crocodylus_ott35868:0.01234567901)mrcaott31216ott35864:0.5)mrcaott246ott31216:0.03086419753,((120:0.006172839506,121:0.006172839506)Testudinidae_ott910117:0.01851851852,((122:0.006172839506,123:0.006172839506)mrcaott392505ott430320:0.006172839506,124:0.01234567901)Cheloniidae_ott66469:0.01234567901)mrcaott6859ott243403:0.524691358)mrcaott246ott2982:0.2407407407,(((((((((125:0.03703703704,((((126:0.006172839506,127:0.006172839506)mrcaott13129ott300620:0.006172839506,128:0.01234567901)mrcaott13129ott147524:0.01234567901,(130:0.006172839506,129:0.006172839506)mrcaott50497ott96823:0.01851851852)mrcaott13129ott50497:0.006172839506,131:0.03086419753)mrcaott13129ott931749:0.006172839506)mrcaott1662ott4565:0.006172839506,132:0.04320987654)mrcaott1662ott2991:0.02469135802,(((133:0.006172839506,134:0.006172839506)mrcaott27076ott373874:0.006172839506,135:0.01234567901)mrcaott6519ott125357:0.006172839506,136:0.01851851852)Viperidae_ott262303:0.04938271605)mrcaott1662ott6519:0.03086419753,(((137:0.006172839506,138:0.006172839506)mrcaott16254ott403970:0.01234567901,(140:0.006172839506,139:0.006172839506)Python_ott675102:0.01234567901)Pythonidae_ott897903:0.006172839506,141:0.02469135802)mrcaott16254ott58974:0.07407407407)mrcaott1662ott16254:0.08641975309,((142:0.04320987654,(((143:0.006172839506,144:0.006172839506)mrcaott10227ott67188:0.02469135802,(((146:0.006172839506,145:0.006172839506)mrcaott51605ott608985:0.006172839506,147:0.01234567901)mrcaott47621ott47629:0.006172839506,148:0.01851851852)mrcaott47621ott160827:0.01234567901)mrcaott3089ott15148:0.006172839506,149:0.03703703704)mrcaott3089ott6523:0.006172839506)Iguania_ott608979:0.03703703704,(((150:0.006172839506,151:0.006172839506)Heloderma_ott978851:0.01234567901,(153:0.006172839506,152:0.006172839506)Elgaria_ott651171:0.01234567901)mrcaott97368ott109823:0.01234567901,(154:0.006172839506,155:0.006172839506)mrcaott150431ott365509:0.02469135802)Anguimorpha_ott139516:0.04938271605)mrcaott2417ott97368:0.1049382716)mrcaott1662ott2417:0.02469135802,((157:0.006172839506,156:0.006172839506)Aspidoscelis_ott85739:0.01234567901,(158:0.006172839506,159:0.006172839506)mrcaott10058ott201146:0.01234567901)mrcaott4987ott10058:0.1913580247)Episquamata_ott4945816:0.01234567901,(160:0.006172839506,161:0.006172839506)mrcaott19900ott122986:0.2160493827)Unidentata_ott4945815:0.006172839506,162:0.2283950617)Bifurcata_ott4945781:0.006172839506,163:0.2345679012)Lepidosauria_ott35881:0.5555555556)Sauria_ott329823:0.2098765432)Amniota_ott229560;
+END;

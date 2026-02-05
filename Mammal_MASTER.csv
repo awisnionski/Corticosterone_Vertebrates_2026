@@ -1,0 +1,35 @@
+﻿Species Name ,Common Name,Body Mass,MSMR,Lifespan,Basal CC,Cortisol,Assay Method,Environment ,Dominant
+Aotus trivirgatus,Night monke,800,2.73,30.1,12,300,RIA,Captive,ND
+Bos taurus,Domestic cow,347000,0.88,30,0.7,3.1,RIA,Captive,ND
+Callospermophilus saturatus,Cascade golden-mantled ground squirrel,275,3.31,,9.6,16.8,RIA,Field,ND
+Canis lupus dingo,Dingo,26625,,20.6,3.3,19,DIDA,Captive,ND
+Castor fiber,Eurasian beaver,19100,,20.6,9.6,22.2,RIA,Field,ND
+Cavia porcellus,Guinea pig,728,3.33,8,19.4,190.3,RIA,Captive,ND
+Ctenomys talarum,Tuco-tuco,170,5.05,,3,20.1,RIA,Field,ND
+Dasyurus geoffroii,Western quoll,890,2.25,6.2,1.5,18,DIDA,Captive,ND
+Dasyurus maculatus,Tiger quoll,5500,1.76,6.8,3.9,29,DIDA,Captive,ND
+Elephas maximus,Asian elephant,3672000,0.64,79,4.8,9.1,EIA,Captive,ND
+Macaca fascicularis,Long-tailed macaque,6363,2.73,39,13.8,210,RIA,Captive,ND
+Macaca mulatta,Rhesus macaque,8235,2.43,40,8.8,245,RIA,Captive,ND
+Macropus giganteus,Eastern grey kangaroo,49500,,25,2.2,18,DIDA,Captive,ND
+Macropus rufogriseus,Red-necked wallaby,16200,,15.2,1.5,17,DIDA,Captive,ND
+Mus musculus,House mouse,33,8.2,4,40,100,RIA,Captive,ND
+Mustela putorius furo,Domestic ferret,1140,,11.1,2.5,26.6,RIA,Captive,ND
+Odocoileus virginianus,White-tailed deer,87000,1.99,23,2.6,56,RIA,Field,ND
+Orcinus orca,Killer whale,3987500,0.57,70,2.8,18.9,EIA,Captive,ND
+Oryctolagus cuniculus,European rabbit,3000,3.41,9,11,31.5,EIA,Captive,ND
+Ovis aries,Domestic sheep,80000,,22.8,0.9,5.2,DIDA,Captive,ND
+Psammomys obesus,Fat sand rat,212,,3.2,5.3,166.5,RIA,Field,ND
+Saimiri sciureus,Common squirrel monkey,925,5.29,30.2,20.5,1990,RIA,Captive,ND
+Setonix brachyurus,Quokka,3500,1.74,13.8,5.9,12,DIDA,Captive,ND
+Sus scrofa,Wild boar,105000,0.77,27,11.1,17.3,RIA,Captive,ND
+Tamias amoenus,Yellow-pine chipmunk,48,9.42,,23.9,679,RIA,Field,ND
+Urocitellus beldingi,Belding's ground squirrel,290,2.71,,16.3,37.7,RIA,Field,ND
+Urocitellus parryii,Arctic ground squirrel,650,4.47,,8.1,126,RIA,Field,ND
+Vombatus ursinus,Common wombat,25500,,30,1.3,2.3,DIDA,Captive,ND
+Vulpes vulpes,Red fox,4132,3,21.3,5.9,23,DIDA,Captive,ND
+Wallabia bicolor,Swamp wallaby,14625,,16.8,1.2,11,DIDA,Captive,ND
+Mesocricetus auratus,Golden hamster,105,8.4,3.9,80,2.5,EIA,Captive,D
+Microtus ochrogaster,Prairie vole,40,8.51,2,631,,RIA,Captive,D
+Microtus pennsylvanicus,Meadow vole,49,10.75,,390.3,,RIA,Field,D
+Tachyglossus aculeatus,Short-beaked echidna,3500,0.88,49.5,3.5,1.8,DIDA,Captive,D
