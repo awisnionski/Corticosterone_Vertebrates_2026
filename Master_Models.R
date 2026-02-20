@@ -496,6 +496,16 @@ rep_ElevBasalCC_pgls <- gls(log(Elevated.CC) ~ log(Basal.CC),
                             correlation = corPagel(value = 0.1, 
                                                    phy = rep_ElevBasalCC_tree, 
                                                    form = ~Species.Name)) 
+
+#accounting for assay 
+rep_ElevBasalCC_pgls_assay <- gls(log(Elevated.CC) ~ log(Basal.CC) + Assay, 
+                            data = rep_ElevBasalCC_data, 
+                            correlation = corPagel(value = 0.1, 
+                                                   phy = rep_ElevBasalCC_tree, 
+                                                   form = ~Species.Name)) 
+#compare models to test assay impact
+BIC(rep_ElevBasalCC_pgls, rep_ElevBasalCC_pgls_assay)
+
 #R2 values
 #specify reduced model as null (no relationship, no phylogeny)
 rep_ElevBasalCC_R2_reduced <- lm(log(Elevated.CC) ~ 1, 
@@ -543,6 +553,16 @@ mammal_GC_pgls <- gls(log(Basal.CC) ~ log(Cortisol),
                             correlation = corPagel(value = 0.1, 
                                                    phy = mammal_GC_tree, 
                                                    form = ~Species.Name)) 
+
+#accounting for assay
+mammal_GC_pgls_assay <- gls(log(Basal.CC) ~ log(Cortisol) + Assay, 
+                      data = mammal_GC_data, 
+                      correlation = corPagel(value = 0.1, 
+                                             phy = mammal_GC_tree, 
+                                             form = ~Species.Name)) 
+
+#compare models to test assay impact
+BIC(mammal_GC_pgls, mammal_GC_pgls_assay)
 
 #R2 values: specify reduced model as null model (no relationship, no phylogeny)
 mammal_GC_R2_reduced <- lm(log(Basal.CC) ~ 1, 
