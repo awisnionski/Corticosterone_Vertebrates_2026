@@ -23,7 +23,7 @@ library(patchwork) #combining ggplots
 #load in tree from "VertCleanTree.R"
 tree <- read.nexus("VertTree.nex")
 
-#laundry: load and clean data
+#load and clean data
 #reptiles 🦎🐍🐢🐊
 repdata <- read.csv("Reptile_MASTER.csv", sep = ",", header = TRUE) 
 repclean <- repdata %>%
@@ -110,12 +110,21 @@ if (sum(is.na(vertdata$Basal.CC)) > 0 | sum(is.na(vertdata$Body.Mass)) > 0) {
   rep_BasalCCmass_tree <- tree
 }
 
-#build pgls model 
+#build pgls model
 rep_BasalCCmass_pgls <- gls(log(Basal.CC) ~ log(Body.Mass), 
                             data = rep_BasalCCmass_data, 
                             correlation = corPagel(value = 0.1, 
                                                    phy = rep_BasalCCmass_tree, 
                                                    form = ~Species.Name)) 
+
+#accounting for assay type  
+rep_BasalCCmass_pgls_assay <- gls(log(Basal.CC) ~ log(Body.Mass) + Assay, 
+                                  data = rep_BasalCCmass_data, 
+                                  correlation = corPagel(value = 0.1, 
+                                                         phy = rep_BasalCCmass_tree, 
+                                                         form = ~Species.Name)) 
+#compare models to test assay impact
+BIC(rep_BasalCCmass_pgls, rep_BasalCCmass_pgls_assay)
 
 #R2 values: specify reduced model as null model (no relationship, no phylogeny)
 rep_BasalCCmass_R2_reduced <- lm(log(Basal.CC) ~ 1, 
@@ -128,17 +137,17 @@ rep_BasalCCmass_plot<- ggplot(data = rep_BasalCCmass_data, aes(x = log(Body.Mass
   geom_abline(intercept = coefficients(summary(rep_BasalCCmass_pgls))[1,1], 
               slope = coefficients(summary(rep_BasalCCmass_pgls))[2,1]) +
   theme_classic() +
-  theme(axis.title = element_text(size = 14),
-        axis.text = element_text(size = 14)) +
+  theme(axis.title = element_text(size = 20),
+        axis.text = element_text(size = 16)) +
   xlim(1, 15.5) +
   ylim(-1, 6.5) +
   labs(x = "Body Mass (ln(g))",
-       y = "Baseline CCST (ln(ng/ml)") +
+       y = "Baseline CCST (ln(ng/ml))") +
   annotate("text", x = 1, y = 6.5, label = "A", size = 6, 
            fontface = "bold", hjust = 0, vjust = 1) +
   add_phylopic(x = 2.5, y = 6.3, img = reptileimg, alpha = 1, height = 1.1)
 
-ggsave("rep_BasalCCmass.png",
+ggsave("rep_BasalCCmass.pdf",
        width = 7,
        height = 5) 
 
@@ -162,6 +171,15 @@ bird_BasalCCmass_pgls <- gls(log(Basal.CC) ~ log(Body.Mass),
                                                     phy = bird_BasalCCmass_tree, 
                                                     form = ~Species.Name,
                                                     fixed = TRUE)) #lambda < 0 so manually bound at 0
+#accounting for assay
+bird_BasalCCmass_pgls_assay <- gls(log(Basal.CC) ~ log(Body.Mass) + Assay, 
+                             data = bird_BasalCCmass_data, 
+                             correlation = corPagel(value = 0.1, #test if model can optimize 
+                                                    phy = bird_BasalCCmass_tree, 
+                                                    form = ~Species.Name))
+
+#compare models to test assay impact
+BIC(bird_BasalCCmass_pgls, bird_BasalCCmass_pgls_assay)
 
 #R2 values: specify reduced model as null model (no relationship, no phylogeny)
 bird_BasalCCmass_R2_reduced <- lm(log(Basal.CC) ~ 1, 
@@ -174,17 +192,17 @@ bird_BasalCCmass_plot <- ggplot(data = bird_BasalCCmass_data, aes(x = log(Body.M
   geom_abline(intercept = coefficients(summary(bird_BasalCCmass_pgls))[1,1], 
               slope = coefficients(summary(bird_BasalCCmass_pgls))[2,1]) +
   theme_classic() +
-  theme(axis.title = element_text(size = 14),
-        axis.text = element_text(size = 14)) +
+  theme(axis.title = element_text(size = 20),
+        axis.text = element_text(size = 16)) +
   xlim(1, 15.5) +
   ylim(-1, 6.5) +
   labs(x = "Body Mass (ln(g))",
-       y = "Baseline CCST (ln(ng/ml)") +
+       y = "Baseline CCST (ln(ng/ml))") +
   annotate("text", x = 1, y = 6.5, label = "B", size = 6, 
            fontface = "bold", hjust = 0, vjust = 1) +
   add_phylopic(x = 3.75, y = 6.3, img = birdimg, alpha = 1, height = 1)
 
-ggsave("bird_BasalCCmass.png",
+ggsave("bird_BasalCCmass.pdf",
        width = 7,
        height = 5) 
 
@@ -207,6 +225,15 @@ mammal_BasalCCmass_pgls <- gls(log(Basal.CC) ~ log(Body.Mass),
                                correlation = corPagel(value = 0.1, 
                                                       phy = mammal_BasalCCmass_tree, 
                                                       form = ~Species.Name)) 
+#accounting for assay type
+mammal_BasalCCmass_pgls_assay <- gls(log(Basal.CC) ~ log(Body.Mass) + Assay, 
+                               data = mammal_BasalCCmass_data, 
+                               correlation = corPagel(value = 0.15, #convergence
+                                                      phy = mammal_BasalCCmass_tree, 
+                                                      form = ~Species.Name)) 
+
+#compare models to test assay impact
+BIC(mammal_BasalCCmass_pgls, mammal_BasalCCmass_pgls_assay)
 
 #R2 values: specify reduced model as null model (no relationship, no phylogeny)
 mammal_BasalCCmass_R2_reduced <- lm(log(Basal.CC) ~ 1, 
@@ -219,20 +246,20 @@ mammal_BasalCCmass_plot <- ggplot(data = mammal_BasalCCmass_data, aes(x = log(Bo
   geom_abline(intercept = coefficients(summary(mammal_BasalCCmass_pgls))[1,1], 
               slope = coefficients(summary(mammal_BasalCCmass_pgls))[2,1]) +
   theme_classic() +
-  theme(axis.title = element_text(size = 14),
-        axis.text = element_text(size = 14), 
+  theme(axis.title = element_text(size = 20),
+        axis.text = element_text(size = 16), 
         legend.position = "none") +
   xlim(1, 15.5) +
   ylim(-1, 6.6) +
   scale_shape_manual(values = c("D" = 1, "ND" = 16), labels = c("D" = "Dominant", "ND" = "Non-dominant")) +
   labs(x = "Body Mass (ln(g))",
-       y = "Baseline CCST (ln(ng/ml)",
+       y = "Baseline CCST (ln(ng/ml))",
        shape = "Corticosterone") +
   annotate("text", x = 1, y = 6.5, label = "C", size = 6, 
            fontface = "bold", hjust = 0, vjust = 1) +
-  add_phylopic(x = 6, y = 6.3, img = mammalimg, alpha = 1, height = 1)
+  add_phylopic(x = 6.75, y = 6.3, img = mammalimg, alpha = 1, height = 1)
 
-ggsave("mammal_BasalCCmass.png",
+ggsave("mammal_BasalCCmass.pdf",
        width = 7,
        height = 5) 
 
@@ -258,6 +285,17 @@ rep_CORTMSMR_pgls <- gls(log(Basal.CC) ~ log(MSMR),
                                                 phy = rep_CORTMSMR_tree, 
                                                 form = ~Species.Name)) 
 
+#accounting for assay
+#build pgls model 
+rep_CORTMSMR_pgls_assay <- gls(log(Basal.CC) ~ log(MSMR) + Assay, 
+                         data = rep_CORTMSMR_data, 
+                         correlation = corPagel(value = 0.1, 
+                                                phy = rep_CORTMSMR_tree, 
+                                                form = ~Species.Name)) 
+
+#compare models to test assay impact
+BIC(rep_CORTMSMR_pgls, rep_CORTMSMR_pgls_assay)
+
 #R2 values: specify reduced model as null model (no relationship, no phylogeny)
 rep_CORTMSMR_R2_reduced <- lm(log(Basal.CC) ~ 1, 
                               data = rep_CORTMSMR_data) 
@@ -269,17 +307,17 @@ rep_CORTMSMR_plot <- ggplot(data = rep_CORTMSMR_data, aes(x = log(MSMR), y = log
   geom_abline(intercept = coefficients(summary(rep_CORTMSMR_pgls))[1,1], 
               slope = coefficients(summary(rep_CORTMSMR_pgls))[2,1]) +
   theme_classic() +
-  theme(axis.title = element_text(size = 14),
-        axis.text = element_text(size = 14)) +
+  theme(axis.title = element_text(size = 20),
+        axis.text = element_text(size = 16)) +
   xlim(-10, -3) +
   ylim(-2, 7) +
   labs(x = "MSMR (ln(W/g))",
-       y = "Baseline CCST (ln[ng/ml])") +
+       y = "Baseline CCST (ln(ng/ml))") +
   annotate("text", x = -10, y = 7, label = "A", size = 6, 
            fontface = "bold", hjust = 0, vjust = 1) +
-  add_phylopic(x = -9, y = 6.8, img = reptileimg, alpha = 1, height = 1.1)
+  add_phylopic(x = -9.1, y = 6.8, img = reptileimg, alpha = 1, height = 1.1)
 
-ggsave("rep_CORTMSMR.png",
+ggsave("rep_CORTMSMR.pdf",
        width = 7,
        height = 5) 
 
@@ -304,6 +342,14 @@ bird_CORTMSMR_pgls <- gls(log(Basal.CC) ~ log(MSMR),
                                                  form = ~Species.Name,
                                                  fixed = TRUE)) #lambda < 0 so manually bound at 0
 
+bird_CORTMSMR_pgls_assay <- gls(log(Basal.CC) ~ log(MSMR) + Assay, 
+                          data = bird_CORTMSMR_data, 
+                          correlation = corPagel(value = 0.15, #up starting value due to coonvergence 
+                                                 phy = bird_CORTMSMR_tree, 
+                                                 form = ~Species.Name))
+#compare models to test assay impact
+BIC(bird_CORTMSMR_pgls, bird_CORTMSMR_pgls_assay)
+
 #R2 values: specify reduced model as null model (no relationship, no phylogeny)
 bird_CORTMSMR_R2_reduced <- lm(log(Basal.CC) ~ 1, 
                                data = bird_CORTMSMR_data) 
@@ -315,17 +361,17 @@ bird_CORTMSMR_plot <- ggplot(data = bird_CORTMSMR_data, aes(x = log(MSMR), y = l
   geom_abline(intercept = coefficients(summary(bird_CORTMSMR_pgls))[1,1], 
               slope = coefficients(summary(bird_CORTMSMR_pgls))[2,1]) +
   theme_classic() +
-  theme(axis.title = element_text(size = 14),
-        axis.text = element_text(size = 14)) +
+  theme(axis.title = element_text(size = 20),
+        axis.text = element_text(size = 16)) +
   xlim(-10, -3) +
   ylim(-2, 7) +
   labs(x = "MSMR (ln(W/g))",
-       y = "Baseline CCST (ln[ng/ml])") +
+       y = "Baseline CCST (ln(ng/ml))") +
   annotate("text", x = -10, y = 7, label = "B", size = 6, 
            fontface = "bold", hjust = 0, vjust = 1) +
   add_phylopic(x = -8.75, y = 6.8, img = birdimg, alpha = 1, height = 1)
 
-ggsave("bird_CORTMSMR.png",
+ggsave("bird_CORTMSMR.pdf",
        width = 7,
        height = 5) 
 
@@ -349,6 +395,14 @@ mammal_CORTMSMR_pgls <- gls(log(Basal.CC) ~ log(MSMR),
                                                    phy = mammal_CORTMSMR_tree, 
                                                    form = ~Species.Name)) 
 
+mammal_CORTMSMR_pgls_assay <- gls(log(Basal.CC) ~ log(MSMR) + Assay, 
+                            data = mammal_CORTMSMR_data, 
+                            correlation = corPagel(value = 0.15, #up starting value due to convergence 
+                                                   phy = mammal_CORTMSMR_tree, 
+                                                   form = ~Species.Name)) 
+#compare models to test assay impact
+BIC(mammal_CORTMSMR_pgls, mammal_CORTMSMR_pgls_assay)
+
 #R2 values: specify reduced model as null model (no relationship, no phylogeny)
 mammal_CORTMSMR_R2_reduced <- lm(log(Basal.CC) ~ 1, 
                                  data = mammal_CORTMSMR_data) 
@@ -361,19 +415,19 @@ mammal_CORTMSMR_plot <- ggplot(data = mammal_CORTMSMR_data, aes(x = log(MSMR), y
               slope = coefficients(summary(mammal_CORTMSMR_pgls))[2,1]) +
   theme_classic() +
   scale_shape_manual(values = c("D" = 1, "ND" = 16), labels = c("D" = "Dominant", "ND" = "Non-dominant")) +
-  theme(axis.title = element_text(size = 14),
-        axis.text = element_text(size = 14), 
+  theme(axis.title = element_text(size = 20),
+        axis.text = element_text(size = 16), 
         legend.position = "none") +
   xlim(-10, -3) +
   ylim(-2, 7) +
   labs(x = "MSMR (ln(W/g))",
-       y = "Baseline CCST (ln[ng/ml])",
+       y = "Baseline CCST (ln(ng/ml))",
        shape = "Corticosterone") +
   annotate("text", x = -10, y = 7, label = "C", size = 6, 
            fontface = "bold", hjust = 0, vjust = 1) +
   add_phylopic(x = -8.75, y = 6.8, img = mammalimg, alpha = 1, height = 1)
 
-ggsave("mammal_CORTMSMR.png",
+ggsave("mammal_CORTMSMR.pdf",
        width = 7,
        height = 5) 
 
@@ -454,15 +508,19 @@ rep_ElevBasalCC_plot <- ggplot(data = rep_ElevBasalCC_data, aes(x = log(Basal.CC
   geom_abline(intercept = coefficients(summary(rep_ElevBasalCC_pgls))[1,1], 
               slope = coefficients(summary(rep_ElevBasalCC_pgls))[2,1]) +
   theme_classic() +
-  theme(axis.title = element_text(size = 14),
-        axis.text = element_text(size = 14)) +
-  labs(x = "Baseline CCST (ln[ng/ml])",
-       y = "Elevated CCST (ln[ng/ml])") +
-  add_phylopic(x = 0.5, y = 6, img = reptileimg, alpha = 1, height = 1)
+  theme(axis.title = element_text(size = 16),
+        axis.text = element_text(size = 16)) +
+  labs(x = "Baseline CCST (ln(ng/ml))",
+       y = "Elevated CCST (ln(ng/ml))") +
+  add_phylopic(x = 0.4, y = 6, img = reptileimg, alpha = 1, height = 1)
 
 ggsave("rep_ElevBasalCC.png",
        width = 7,
        height = 5) 
+
+#fold difference between y~x
+#intercept is on a log scale so it needs to be backtransformed
+exp(coefficients(summary(rep_ElevBasalCC_pgls))[1,1])
 
 
 # Mammals: CCST vs. Cortisol ----------------------------------------------
@@ -497,12 +555,12 @@ mammal_GC_plot <- ggplot(data = mammal_GC_data, aes(x = log(Cortisol), y = log(B
   geom_abline(intercept = coefficients(summary(mammal_GC_pgls))[1,1], 
               slope = coefficients(summary(mammal_GC_pgls))[2,1]) +
   theme_classic() +
-  theme(axis.title = element_text(size = 14),
-        axis.text = element_text(size = 14)) +
+  theme(axis.title = element_text(size = 16),
+        axis.text = element_text(size = 16)) +
   xlim(0, 8) +
   ylim(-1, 5) +
-  labs(x = "Baseline Cortisol (ln[ng/ml])",
-       y = "Baseline CCST (ln[ng/ml])") +
+  labs(x = "Baseline Cortisol (ln(ng/ml))",
+       y = "Baseline CCST (ln(ng/ml))") +
   add_phylopic(x = 0.25, y = 4.9, img = mammalimg, alpha = 1, height = 0.75)
 
 ggsave("mammal_GC.png",
@@ -515,18 +573,19 @@ rep_BasalCCmass_plot + bird_BasalCCmass_plot + mammal_BasalCCmass_plot +
   plot_layout(axis_titles = "collect")
 
 ggsave("BasalCCmass.png", 
-       width = 13, 
+       width = 12, 
        height = 6, 
-       dpi = 200)
+       units = "in",
+       dpi = 1000)
 
 #---Baseline CCST vs. MSMR
 rep_CORTMSMR_plot + bird_CORTMSMR_plot + mammal_CORTMSMR_plot + 
   plot_layout(axis_titles = "collect") 
 
 ggsave("CORTMSMR.png", 
-       width = 13, 
+       width = 12, 
        height = 6,
-       dpi = 200)
+       dpi = 1000)
 
 # Stats Table -------------------------------------------------------------
 #spooky time 👻
